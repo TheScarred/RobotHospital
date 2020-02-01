@@ -651,7 +651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03c993732bf6dd742a58001c92837f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 300
+  power: 400
   battery: {fileID: 0}
   batteryConsumeTime: 15
   powerConsumeTime: 180
