@@ -8,9 +8,10 @@ public class RobotProfile : ScriptableObject
     public Sprite robot;
     public bool isNext;
 
-    public void Init(int _id)
+    public void Init(int _id, bool _isNext)
     {
         id = _id;
+        isNext = _isNext;
     }
 
 }

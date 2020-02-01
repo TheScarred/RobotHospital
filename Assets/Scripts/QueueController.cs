@@ -20,16 +20,11 @@ public class QueueController : MonoBehaviour
 
     private void Start()
     {
-        profiles[0] = ScriptableObject.CreateInstance<RobotProfile>();
-        profiles[0].isNext = false;
-        profiles[0].Init(GameManager.GetInstance().RobotID++);
-        profiles[1] = ScriptableObject.CreateInstance<RobotProfile>();
-        profiles[1].isNext = false;
-        profiles[1].Init(GameManager.GetInstance().RobotID++);
-        profiles[2] = ScriptableObject.CreateInstance<RobotProfile>();
-        profiles[2].isNext = true;
-        profiles[2].Init(GameManager.GetInstance().RobotID++);
-
+        for (byte i = 0; i < profiles.Length; i++)
+        {
+            profiles[i] = ScriptableObject.CreateInstance<RobotProfile>();
+            profiles[i].Init(GameManager.GetInstance().RobotID++, false);
+        }
     }
 
     // Update is called once per frame
