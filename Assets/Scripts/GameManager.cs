@@ -23,17 +23,7 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    private int robotID = 0;
-    public int RobotID
-    {
-        get { return robotID; }
-        set { robotID = value; }
-    }
-
-    private int itemID = 0;
-    public int ItemID
-    {
-        get { return itemID; }
-        set { itemID = value; }
-    }
+    public int RobotID { get; set; } = 0;
+    public int ItemID { get; set; } = 0;
+    public int Money { get; set; } = 1000;
 }

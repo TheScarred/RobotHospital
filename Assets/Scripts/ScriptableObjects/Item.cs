@@ -7,10 +7,8 @@ public class Item : ScriptableObject
     public Transform spawnPoint;
     public int id;
 
-    public RobotPart part;
-
-    public virtual void Spawn()
+    public void Spawn(int _id)
     {
-
+        id = _id;
     }
 }
