@@ -113,8 +113,8 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("PlayerMovingHU", playerMovingHU);
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
-        anim.SetFloat("LastMoveXH", lastMove.x);
-        anim.SetFloat("LastMoveYH", lastMove.y);
+        //anim.SetFloat("LastMoveXH", lastMove.x);
+        //anim.SetFloat("LastMoveYH", lastMove.y);
 
     }
 
