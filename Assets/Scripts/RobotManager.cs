@@ -18,8 +18,9 @@ public class RobotManager : MonoBehaviour
         
     }
 
-    public RobotProfile Next()
+    public void Next()
     {
-        return QueueController.GetInstance().GetNext();
+        current = QueueController.GetInstance().GetNext();
+        QueueController.GetInstance().Pop(current.id);
     }
 }

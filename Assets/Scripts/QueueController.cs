@@ -22,10 +22,13 @@ public class QueueController : MonoBehaviour
     {
         profiles[0] = ScriptableObject.CreateInstance<RobotProfile>();
         profiles[0].isNext = false;
+        profiles[0].Init(GameManager.GetInstance().RobotID++);
         profiles[1] = ScriptableObject.CreateInstance<RobotProfile>();
         profiles[1].isNext = false;
+        profiles[1].Init(GameManager.GetInstance().RobotID++);
         profiles[2] = ScriptableObject.CreateInstance<RobotProfile>();
         profiles[2].isNext = true;
+        profiles[2].Init(GameManager.GetInstance().RobotID++);
 
     }
 
@@ -53,6 +56,15 @@ public class QueueController : MonoBehaviour
                 return profiles[i];
         }
         return null;
+    }
+
+    public void Pop(int _id)
+    {
+        for (byte i = 0; i < profiles.Length; i++)
+        {
+            if (profiles[i] != null && profiles[i].id == _id)
+                profiles[i] = null;
+        }
     }
 
 
