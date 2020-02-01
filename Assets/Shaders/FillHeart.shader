@@ -2,14 +2,16 @@
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
-		_FillTex("Texture", 2D) = "white"{}
+        _MainTex ("Back", 2D) = "white" {}
+		_FillTex("Front", 2D) = "white"{}
 		_Mask("Mask",2D)="white"{}
 		_amount("Fill",Range(0.0,1.0))=1.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+		ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha
+        Tags { "RenderType"="Transparent" }
         LOD 100
 
         Pass
@@ -62,7 +64,7 @@
 					result= back;
 				}
 				else {
-					result= (back*(1-m))+(lerp(front,front*fixed4(0,0,0,0), 1-_amount)*m);
+					result= (back*(1-m))+(lerp(front,front*fixed4(0,0,0,1), 1-_amount)*m);
 				}
 
 				return result;
