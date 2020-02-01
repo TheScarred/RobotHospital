@@ -5,20 +5,23 @@ using UnityEngine;
 public class PowerGenerator : MonoBehaviour
 {
     [Range(0, 500f)]
-    public float power = 300f;
+    public float power = 500f;
 
     public Battery battery;
 
-    public float consumeTime; 
-    private float consumeRate;
-    private float t = 0.0f;
-    private static float batteryCap = 130f;
+    public float batteryConsumeTime, powerConsumeTime; 
+    private float powerConsumeRate, batteryConsumeRate;
+    private float u = 0.0f, v = 0.0f;
+    private static float batteryCap = 130f, powerCap = 500f;
 
+    [SerializeField]
+    Material batterySprite;
     // Start is called before the first frame update
     void Start()
     {
-        //battery = new Battery();
-        consumeRate = 1f / consumeTime;
+        battery = ScriptableObject.CreateInstance<Battery>();
+        batteryConsumeRate = 1f / batteryConsumeTime;
+        powerConsumeRate = 1f / powerConsumeTime;
     }
 
     // Update is called once per frame
@@ -26,27 +29,57 @@ public class PowerGenerator : MonoBehaviour
     {
         if (battery != null && power <= 500f)
             Recharge();
+        else if (power > 0)
+            Spend();
+        
+        UpdateSprite();
     }
 
     public void Recharge()
     {
-        if (t <= 1f)
+        if (u <= 1f)
         {
-            t += Time.deltaTime * consumeRate;
-            battery.charge = batteryCap * (1 - t);
-            power += Time.deltaTime * consumeRate * batteryCap;
+            u += Time.deltaTime * batteryConsumeRate;
+            battery.charge = batteryCap * (1 - u);
+            power += Time.deltaTime * batteryConsumeRate * batteryCap;
         }
 
-        if (power > 500f)
-            power = 500f;
+        PowerCheck();
 
         if (battery.charge <= 0)
             KillBattery();
     }
 
+    public void Spend()
+    {
+        if (v <= 1f)
+        {
+            v += Time.deltaTime * powerConsumeRate;
+            power -= Time.deltaTime * powerConsumeRate * powerCap;
+        }
+
+        PowerCheck();
+    }
+
+    public void PowerCheck()
+    {
+        if (power > 500f)
+            power = 500f;
+
+        else if (power <= 0)
+            power = 0;
+        
+    }
+
+    public void UpdateSprite()
+    {
+        batterySprite.SetFloat("_amount", power / 500.0f);
+    }
+
     public void KillBattery()
     {
         battery = null;
+        v = 0;
     }
 
 }
