@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65b244c8bd4828f4581f72265ec009cd, type: 3}
-  m_Name: Robot Profile
+  m_Name: Robot 1
   m_EditorClassIdentifier: 
   hp: 50
   heart: {fileID: 0}

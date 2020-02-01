@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
-    public float hp = 100f;
-    public float dps;
+    public float value = 100f;
+    public float dps = 0.1f;
 
     private void Start()
     {
@@ -14,8 +14,8 @@ public class Heart : MonoBehaviour
 
     private void TakeDamage()
     {
-        hp -= dps;
-        Debug.Log("HP is: " + hp);
+        value -= dps;
+        Debug.Log("HP is: " + value);
     }
 
 }
