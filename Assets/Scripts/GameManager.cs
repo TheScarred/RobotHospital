@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PartType
+{
+    HEAD,
+    ARM,
+    LEG
+}
+
 public class GameManager : MonoBehaviour
 {
     #region SINGLETON
@@ -21,5 +28,12 @@ public class GameManager : MonoBehaviour
     {
         get { return robotID; }
         set { robotID = value; }
+    }
+
+    private int itemID = 0;
+    public int ItemID
+    {
+        get { return itemID; }
+        set { itemID = value; }
     }
 }
