@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b244c8bd4828f4581f72265ec009cd, type: 3}
-  m_Name: Robot 2
+  m_Script: {fileID: 11500000, guid: e939947d5fe0b18489177030db49794b, type: 3}
+  m_Name: Store Battery
   m_EditorClassIdentifier: 
-  hp: 50
-  heart: {fileID: 0}
-  robot: {fileID: 0}
-  isNext: 0
+  item: {fileID: 11400000, guid: 0f00236549bd6f14bbcbc36f436ad828, type: 2}
+  cost: 500

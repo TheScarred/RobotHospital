@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b244c8bd4828f4581f72265ec009cd, type: 3}
-  m_Name: Robot 3
+  m_Script: {fileID: 11500000, guid: 8ab95dbfe6813b74abc1a41ac932b302, type: 3}
+  m_Name: Part Head
   m_EditorClassIdentifier: 
-  hp: 50
-  heart: {fileID: 0}
-  robot: {fileID: 0}
-  isNext: 0
+  spawnPoint: {fileID: 0}
+  id: 0
+  type: 0
