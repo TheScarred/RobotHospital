@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ab95dbfe6813b74abc1a41ac932b302, type: 3}
-  m_Name: Part Head
+  m_Script: {fileID: 11500000, guid: e939947d5fe0b18489177030db49794b, type: 3}
+  m_Name: Battery Shop
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
-  id: 0
+  item: {fileID: 0}
   type: 0
+  cost: 0

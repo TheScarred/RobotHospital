@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PartType
+public enum ItemType
 {
     HEAD,
     ARM,
-    LEG
+    LEG,
+    METAL,
+    BATTERY
 }
 
 public class GameManager : MonoBehaviour
@@ -23,7 +25,21 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    public Sprite[] sprites;
+
+    private List<Player> players;
+    public List<Player> Players { get { return players; } }
+
+    private List<Item> items;
+    public List<Item> Items { get { return items; } }
+
     public int RobotID { get; set; } = 0;
     public int ItemID { get; set; } = 0;
-    public int Money { get; set; } = 1000;
+    public int Money { get; set; } = 2500;
+
+    private void Start()
+    {
+        items = new List<Item>();
+        players = new List<Player>(2);
+    }
 }

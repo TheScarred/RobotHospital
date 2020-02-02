@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2245231150122421465}
   - component: {fileID: 2245231150122421470}
   - component: {fileID: 2245231150122421467}
-  - component: {fileID: 3033066687086526738}
-  - component: {fileID: 5363477272346389121}
+  - component: {fileID: 641462134928822943}
+  - component: {fileID: 7737780442682625177}
   m_Layer: 0
-  m_Name: Battery
+  m_Name: Metal
   m_TagString: Grab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0937eac75a44ab948a725d934a5e5bd0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9e38c9298f4ccb341b841639351125f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
---- !u!114 &3033066687086526738
+--- !u!114 &641462134928822943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   renderer: {fileID: 2245231150122421470}
-  type: 4
---- !u!50 &5363477272346389121
+  type: 3
+--- !u!50 &7737780442682625177
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

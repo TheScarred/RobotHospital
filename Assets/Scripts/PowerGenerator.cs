@@ -19,6 +19,7 @@ public class PowerGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         //battery = ScriptableObject.CreateInstance<Battery>();
         batteryConsumeRate = 1f / batteryConsumeTime;
         powerConsumeRate = 1f / powerConsumeTime;

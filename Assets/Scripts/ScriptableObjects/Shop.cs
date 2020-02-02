@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Item Store", menuName = "Store")]
-public class Store : ScriptableObject
+public class Shop : ScriptableObject
 {
-    public Item item;
+    public Transform spawnPoint;
+    public ItemProfile item;
+    public ItemType type;
     public int cost;
 }

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ee1c8a10892ee4f86eb481c8eabc7c, type: 3}
-  m_Name: Furnace Arm
+  m_Script: {fileID: 11500000, guid: 27f6b9f51c9226440a7031a131c88a9e, type: 3}
+  m_Name: Battery
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
-  materialNeeded: {fileID: 11400000, guid: 2d9c63f180014c945877248cd85f8ad8, type: 2}
-  result: {fileID: 11400000, guid: 1692ab0c0dde434479e8c6c7b0d115cf, type: 2}
+  prefab: {fileID: 2245231150122421471, guid: b558351e3bd642f49b03b4636e437c99, type: 3}
+  id: 0

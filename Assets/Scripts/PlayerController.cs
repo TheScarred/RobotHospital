@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float moveSpeed;
     public bool grabbed;
     public float distance=2f;
@@ -26,7 +25,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        
     }
 
     void Update()
