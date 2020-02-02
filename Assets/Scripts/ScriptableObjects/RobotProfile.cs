@@ -8,27 +8,10 @@ public class RobotProfile : ScriptableObject
     public Sprite robot;
     public bool isNext;
 
-    public Sprite Head;
-    public Sprite HeadBr;
-
-    public Sprite Body;
-    public Sprite BodyBr;
-    
-    public Sprite Legs;
-    public Sprite LegsBr;
-
-    int bitmap;
-
-    public int BitMap
-    {
-        get { return bitmap; }
-    }
-
-    public void Init(int _id, bool _isNext,int condition)
+    public void Init(int _id, bool _isNext)
     {
         id = _id;
         isNext = _isNext;
-        bitmap = 1 << condition;
     }
 
 }
