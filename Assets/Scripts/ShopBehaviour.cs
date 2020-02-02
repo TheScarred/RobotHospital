@@ -40,7 +40,11 @@ public class ShopBehaviour : MonoBehaviour
 
         Item item = obj.GetComponent<Item>();
         item.GetComponent<Item>().id = store.item.ID();
+<<<<<<< Updated upstream
         item.transform.position = new Vector3(0,0,-0.5f);
+=======
+        item.transform.position = new Vector3(0, 0, -0.5f);
+>>>>>>> Stashed changes
         item.gameObject.SetActive(true);
     }
 
