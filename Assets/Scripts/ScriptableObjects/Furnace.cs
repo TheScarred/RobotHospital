@@ -6,5 +6,5 @@ using UnityEngine;
 public class Furnace : ScriptableObject
 {
     public Transform spawnPoint;
-    public ItemProfile materialNeeded, result;
+    public ItemType materialNeeded, result;
 }
