@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Grab
+  - Shop
+  - Oven
+  - Recicle
+  - Generator
+  - Table
+  - Head
+  - Body
+  - Legs
   layers:
   - Default
   - TransparentFX
@@ -40,4 +49,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 896713057
+    locked: 0
+  - name: Gameplay
+    uniqueID: 968402517
+    locked: 0
+  - name: Doors
+    uniqueID: 2566296551
+    locked: 0
+  - name: Front
+    uniqueID: 4188805253
+    locked: 0
+  - name: Player
+    uniqueID: 1772826925
+    locked: 0
+  - name: Objects
+    uniqueID: 4203305281
     locked: 0

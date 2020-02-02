@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5883634690333031994}
   - component: {fileID: 6231665478405611718}
   m_Layer: 5
-  m_Name: head
+  m_Name: 3.-Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4838301718570807627}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7623808006281694229}
   - component: {fileID: 4517278062494799927}
   m_Layer: 5
-  m_Name: Image
+  m_Name: 1.-Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,7 +105,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4838301718570807627}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 834087195482725208}
   - component: {fileID: 4727985778933590687}
   m_Layer: 5
-  m_Name: chest
+  m_Name: 4.-Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 4838301718570807627}
   - component: {fileID: 2741547344071632440}
   - component: {fileID: 5894925588688114060}
+  - component: {fileID: 6187793811093959528}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -254,11 +255,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1088060171097207147}
   - {fileID: 4208294135934208302}
-  - {fileID: 5364012503579217642}
-  - {fileID: 4381297155840778063}
+  - {fileID: 1088060171097207147}
   - {fileID: 3395732230049934481}
+  - {fileID: 4381297155840778063}
+  - {fileID: 5364012503579217642}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -305,6 +306,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6187793811093959528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3344891157337355556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42e3f229acac2e41aa1b6d3f495ba0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6503326796584946106
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +330,7 @@ GameObject:
   - component: {fileID: 2244007672018693905}
   - component: {fileID: 8014077244344355673}
   m_Layer: 5
-  m_Name: legs
+  m_Name: 5.-Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,7 +348,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4838301718570807627}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -392,7 +405,7 @@ GameObject:
   - component: {fileID: 5819480732116484508}
   - component: {fileID: 6076822303640281848}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: 2.-Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,7 +423,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4838301718570807627}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

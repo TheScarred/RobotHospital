@@ -8,7 +8,7 @@ public class FurnaceProfile : MonoBehaviour
     Slider selfBar;
     [SerializeField]
     Image selfBarColor;
-
+    [SerializeField]
     Image selfImage;
     float progress; //PROGRESS OF TGHE BAR
 
@@ -21,12 +21,16 @@ public class FurnaceProfile : MonoBehaviour
     int currentImage;
     bool isCrafting;
 
+    public bool Craft
+    {
+        get { return isCrafting; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         isCrafting = false;
         currentImage = 0;
-        selfImage = GetComponent<Image>();
         selfImage.sprite=imageCollection[currentImage];
         
     }
@@ -57,7 +61,9 @@ public class FurnaceProfile : MonoBehaviour
         }
 
 
-        GameObject.Instantiate(craftResult[currentImage],Vector3.zero,Quaternion.identity);
+        GameObject.Instantiate(craftResult[currentImage],this.transform.GetChild(0).position,Quaternion.identity);
+        selfBar.value = 0.0f;
+        selfBarColor.color = Color.red;
         isCrafting = false;
     }
 

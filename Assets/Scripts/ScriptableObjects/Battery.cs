@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Battery
+public class Battery : ScriptableObject
 {
     public float charge = 130f;   
 }

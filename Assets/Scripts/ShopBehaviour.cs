@@ -6,18 +6,18 @@ public class ShopBehaviour : MonoBehaviour
 {
     public Shop store;
 
-    public void Purchase(Collider2D col)
+    public GameObject Purchase()
     {
-        GameManager.GetInstance().Money -= store.cost;
-        SpawnItem();
+        if (GameManager.GetInstance().Money >= store.cost)
+        {
+            GameManager.GetInstance().Money -= store.cost;
+            //return SearchPool();
+            return Spawn();
+        }
+        return null;
     }
 
-    public void SpawnItem()
-    {
-        SearchPool();
-    }
-
-    public GameObject SearchPool()
+    private GameObject SearchPool()
     {
         List<Item> items = GameManager.GetInstance().Items;
 
@@ -46,10 +46,10 @@ public class ShopBehaviour : MonoBehaviour
 
     public GameObject Spawn()
     {
-        GameObject newGO = Instantiate(store.item.prefab);
+        GameObject newGO = Instantiate(store.item.prefab, transform);
         Item newItem = newGO.GetComponent<Item>();
         newItem.id = store.item.ID();
-        GameManager.GetInstance().Items.Add(newItem);
+        //GameManager.GetInstance().Items.Add(newItem);
 
         return newItem.gameObject;
         
@@ -60,12 +60,6 @@ public class ShopBehaviour : MonoBehaviour
         _obj.GetComponent<SpriteRenderer>().sprite = GameManager.GetInstance().sprites[(int)store.type];
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Player"))
-        {
-            Purchase(col);
-        }
-    }
+
     
 }

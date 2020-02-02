@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
     private bool playerMoving;
     private bool playerMovingHU;
     [SerializeField]
-    private bool handsUp;
+    public bool handsUp;
     private Vector2 lastMove;
 
     RaycastHit2D hit;
+    public Item objectRef;
+
     float dir = -1.0f;
 
     void Start()
@@ -59,7 +61,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("Hands " + handsUp + " | Grab" + grabbed);
             if (handsUp == false && !grabbed)
             {
                 Physics2D.queriesStartInColliders = false;
@@ -75,11 +76,33 @@ public class PlayerController : MonoBehaviour
                 {
                     hit = Physics2D.Raycast(transform.position, Vector2.up*dir * transform.localScale.y, distance);
                 }
-                Debug.Log(dir);
-                if (hit.collider != null && hit.collider.tag=="Grab")
+                if (hit.collider != null )
                 {
-                    grabbed = true;
-                    handsUp = true;
+                    if (hit.collider.CompareTag("Grab") || hit.collider.CompareTag("Head")|| hit.collider.CompareTag("Body")|| hit.collider.CompareTag("Legs"))
+                    {
+                        objectRef = hit.collider.gameObject.GetComponent<Item>();
+                        grabbed = true;
+                        handsUp = true;
+                        objectRef.IsGrab=true;
+                        //objectRef.GetComponent<Collider2D>().isTrigger = true;
+                    }
+                    else if (hit.collider.CompareTag("Shop") && GameManager.GetInstance().Money >= 100)
+                    {
+                        objectRef=hit.collider.GetComponent<ShopBehaviour>().Purchase().GetComponent<Item>();
+                        grabbed = true;
+                        handsUp = true;
+                        objectRef.IsGrab = true;
+                       // objectRef.GetComponent<Collider2D>().isTrigger = true;
+                    }
+                    else if (hit.collider.CompareTag("Table") && hit.collider.transform.childCount>0)
+                    {
+                        objectRef = hit.collider.transform.GetChild(0).GetComponent<Item>();
+                        hit.collider.transform.GetChild(0).SetParent(null);
+                        grabbed = true;
+                        handsUp = true;
+                        objectRef.IsGrab = true;
+                    }
+
                 }
                 
                 //grab
@@ -87,9 +110,13 @@ public class PlayerController : MonoBehaviour
             else if (!Physics2D.OverlapPoint(holdpoint.position, notgrabbed))
             {
                 grabbed = false;
-                if (hit.collider.gameObject.GetComponent<Rigidbody2D>() != null)
+                if (objectRef != null)
                 {
-                    hit.collider.gameObject.GetComponent<Rigidbody2D>().velocity = lastMove * throwForce;
+                    objectRef.gameObject.GetComponent<Rigidbody2D>().velocity = lastMove * throwForce;
+                    
+                    //objectRef.GetComponent<Collider2D>().isTrigger = false;
+                    objectRef.IsGrab = false;
+                    objectRef = null;
                 }
 
                 handsUp = false;
@@ -98,8 +125,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (grabbed)
-            hit.collider.gameObject.transform.position = holdpoint.position;
+        if (objectRef != null && grabbed)
+            objectRef.transform.position = holdpoint.position;
+        else
+        {
+            handsUp = false;
+        }
 
 
         anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));

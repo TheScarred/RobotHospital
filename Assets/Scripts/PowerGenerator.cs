@@ -83,4 +83,9 @@ public class PowerGenerator : MonoBehaviour
         v = 0;
     }
 
+    public void CreateBattery()
+    {
+        battery = ScriptableObject.CreateInstance<Battery>();
+    }
+
 }

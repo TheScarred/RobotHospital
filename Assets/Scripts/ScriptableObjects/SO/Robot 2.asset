@@ -12,7 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b244c8bd4828f4581f72265ec009cd, type: 3}
   m_Name: Robot 2
   m_EditorClassIdentifier: 
-  id: 0
-  hp: {fileID: 0}
-  robot: {fileID: 0}
+  id: 1
   isNext: 0
+  start: 88
+  card: {fileID: 0}
+  HeadImg: {fileID: 21300000, guid: 463f6f3615e0ba54389b3086c31a20e5, type: 3}
+  ChestImg: {fileID: 21300000, guid: 0737f27ddfa200f4c8847a327bfcc998, type: 3}
+  LegsImg: {fileID: 21300000, guid: fc2f50cb50dfc4c44b9865bcbef8f72d, type: 3}
+  Head: {fileID: 4205379976691876740, guid: 5b53571ddbc5cb745a33a28ed6adbece, type: 3}
+  HeadBr: {fileID: 221150762543512723, guid: 2a5a92c688860b04c97fd32994aa9556, type: 3}
+  Chest: {fileID: 1482656718543345977, guid: f07f2251fc21a0345be017081e467a28, type: 3}
+  ChestBr: {fileID: 621939162208036913, guid: 613b14ef1c2af5442b82cf4d4ee70ae4, type: 3}
+  Legs: {fileID: 268544249678388763, guid: d39d508c9d29be84d84bc63b4527827c, type: 3}
+  LegsBr: {fileID: 4818667214331399480, guid: e04338b92f28db546b9ef447e68a7a6f, type: 3}
+  piezasRotas: 1
