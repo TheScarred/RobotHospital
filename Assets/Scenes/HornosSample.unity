@@ -490,7 +490,11 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< Updated upstream
   - {fileID: 2100000, guid: 0ee4d519d561d3a4487d1178e1bcc8ed, type: 2}
+=======
+  - {fileID: 2100000, guid: dab07948423e3e747a0b44e106c40a27, type: 2}
+>>>>>>> Stashed changes
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -511,7 +515,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< Updated upstream
   m_Sprite: {fileID: 21300000, guid: e6b6e692ccf178748bf02bfd9a4affe1, type: 3}
+=======
+  m_Sprite: {fileID: 21300000, guid: 35babafea3a1070499c5cfc93f5c2ee3, type: 3}
+>>>>>>> Stashed changes
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
