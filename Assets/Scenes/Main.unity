@@ -474,4 +474,3 @@ MonoBehaviour:
   power: 300
   battery: {fileID: 0}
   consumeTime: 30
-  velocity: 0
