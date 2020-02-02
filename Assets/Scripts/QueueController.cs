@@ -23,7 +23,7 @@ public class QueueController : MonoBehaviour
         for (byte i = 0; i < profiles.Length; i++)
         {
             profiles[i] = ScriptableObject.CreateInstance<RobotProfile>();
-            profiles[i].Init(GameManager.GetInstance().RobotID++, false,2);
+            profiles[i].Init(GameManager.GetInstance().RobotID++, false);
         }
     }
 
